@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #CED4DA;
+}
+
+a {
+    text-decoration: none;
+    color: #495057;
+}
+
+.orange {
+    color: #CB7F3C;
+    border-color: 1px solid #CB7F3C;
+}
+
+.blue {
+    color: #094267;
+    border-color: 1px solid #094267;
+}
+
+.add-user {
+    background: #094267;
+}
+
+.add-user:hover {
+    background: #46718D;
+    color: #FFF;
+}
+
+.btn-actualizar {
+    background: #28A745;
+}
+
+.btn-actualizar:hover {
+    background: #45c964;
+    color: #FFF;
+}
+
+.btn-cancelar {
+    background: #DC3545;
+}
+
+.btn-cancelar:hover {
+    background: #ec6472;
+    color: #FFF;
+}
+
+h1 {
+    color: #495057;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+.login-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario-container {
+    width: 25%;
+    margin: auto;
+}
+
+.btn {
+    margin: auto;
+    margin-top: 40px;
+    color: #FFF;
+    width: 170px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Barra de navegación */
+.header {
+    width: 100%;
+    height: 70px;
+    background: #CB7F3C;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-menu, .logo {
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.container .btn-menu label {
+    color: #FFF;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.container .menu {
+    height: 100%;
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    font-size: 15px;
+}
+
+.user-label {
+    display: block;
+}
+
+.menu div, .menu button {
+    font-size: 20px;
+}
+
+#cerrar-sesion {
+    background: none;
+    color: #FFF;
+    border: none;
+}
+
+/* Menú Lateral */
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0; left: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu {
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 290px;
+    background: #FFF;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav{
+    transform: translateY(15%);
+}
+
+/* Body pagina principal */
+img {
+    margin-bottom: 110px;
+}
+
+/* body modulo del administrador usarios */
+.container-modulos {
+    width: 100%;
+    padding: 100px;
+}
+
+.title h1 {
+    text-align: left;
+    font-size: 35px;
+}
+
+.btn-action {
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    color: #FFF;
+}
+
+.editar {
+    background: #28A745;
+}
+
+.editar:hover {
+    background: #45c964;
+}
+
+.eliminar {
+    background: #DC3545;
+}
+
+.eliminar:hover {
+    background: #ec6472;
+}
+
+.details{
+    background: #17A2B8;
+}
+
+.details:hover {
+    background: #41c4d8;
+}
+
+/* estilos de las cards */
+.card-titulo {
+    padding: 20px;
+    color: #212529;
+    font-size: 18px;
+    background: #F8F9FA;
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.card-contenido {
+    padding: 20px;
+    background: #FFF;
+}
+
+.main-container-cards {
+    display: flex;
+    justify-content: flex-start;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.tarjeta {
+    width: 320px;
+    height: 250px;
+    border-radius: 5px;
+    margin-top: 60px;
+}
