@@ -83,7 +83,7 @@
       <div class="title"><h1>Actividades Asignadas</h1></div>
       
       <div class="main-container-cards">
-        <div class="tarjeta orange">
+        <div class="tarjeta orange" id="tarjeta-naranja" data-bs-toggle="modal" data-bs-target="#activitie-modal">
           <div class="card-titulo">El Televisor No Quiere Prender</div>
           <div class="card-contenido orange">
             <h5>Nombre del Profesor</h5>
@@ -94,7 +94,7 @@
           </div>
         </div>
   
-        <div class="tarjeta blue">
+        <div class="tarjeta blue" id="tarjeta-azul" data-bs-toggle="modal" data-bs-target="#activitie-modal">
           <div class="card-titulo">El Televisor No Quiere Prender</div>
           <div class="card-contenido blue">
             <h5>Nombre del Profesor</h5>
@@ -102,6 +102,143 @@
               Descripcion de la solicitud
               Descripcion de la solicitud
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ventana Modal Actividades Asignadas -->
+    <div class="modal fade" id="activitie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-update-user">Nombre de la Actividad</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <div class="main-container-form-activities">
+              <div class="formulario">
+                <div class="mb-3 d-flex flex-column">
+                  <label for="exampleFormControlInput1" class="form-label"><h5>Nombre del Solicitante</h5></label>
+                  <label for="exampleFormControlInput1" class="form-label"><p>Nombre del profesor</p></label>
+                </div>
+                <div class="mb-3 d-flex flex-column">
+                  <label for="exampleFormControlInput1" class="form-label"><h5>Prioridad</h5></label>
+                  <label for="exampleFormControlInput1" class="form-label"><p>Tipo de Prioridad</p></label>
+                </div>
+              </div>
+  
+              <!-- Text Area -->
+              <div class="area-descripcion">
+                <div class="mb-3">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descripción de la Actividad..."></textarea>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-salir" data-bs-dismiss="modal">Salir</button>
+            <button type="button" class="btn btn-terminar-act" id="btn-terminar-act" data-bs-toggle="modal" data-bs-target="#encuesta" data-bs-dismiss="modal">Terminar Actividad</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ventana Modal Encuesta de Servicio -->
+    <div class="modal fade" id="encuesta" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-update-user">Encuesta de Servicio</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"><p>Amabilidad del Personal</p></label>
+              <div class="d-flex flex-row justify-content-around">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">2</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">3</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">4</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">5</label>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">                
+              <label for="exampleFormControlInput1" class="form-label"><p>Rapidez de Atención</p></label>
+              <div class="d-flex flex-row justify-content-around">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">2</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">3</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">4</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">5</label>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">                
+              <label for="exampleFormControlInput1" class="form-label"><p>Conocimientos Técnicos</p></label>
+              <div class="d-flex flex-row justify-content-around">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">2</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">3</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">4</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">5</label>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Text Area -->
+            <div class="mb-3">
+              <h5>Firma del Solicitante</h5>
+              <div class="content-signature"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-salir" data-bs-dismiss="modal">Salir</button>
+            <button type="button" class="btn btn-terminar-encuesta" data-bs-dismiss="modal">Terminar</button>
           </div>
         </div>
       </div>
