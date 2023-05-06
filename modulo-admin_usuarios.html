@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/css.css">
+
+    <title>Módulo del Administrador - Usuarios</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="btn-menu">
+                    <label for="btn-menu"><i class="bi bi-list"></i></label>
+                </div>
+                <div class="logo">
+                    <h1 class="fw-bold">SGRM-UAMM</h1>
+                </div>
+            </div>
+            <nav class="menu">
+                <div>user</div>
+                <button id="cerrar-sesion"><i class="bi bi-box-arrow-right"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Administrador
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <a href="modulo-admin_usuarios.html">Usuarios</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Moderador
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <a href="modulo-mod_cat-act.html">Catálogo de Actividades</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Asesor Técnico
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <a href="modulo-asesor-tec_act-asig.html">Actividades Asignadas</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-modulos">
+        <div class="title"><h1>Usuarios Registrados</h1></div>
+        <button type="button" class="btn add-user" data-bs-toggle="modal" data-bs-target="#add-user">
+        Agregar Usuario
+        </button>
+
+        <!-- Ventana Modal -->
+        <div class="modal fade" id="add-user" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-add-user">Agregar Usuario</h5>
+              </div>
+              <div class="modal-body">
+                <!-- Form -->
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="name-form-add" placeholder="Nombre(s)">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="lastname-form-add" placeholder="Apellido(s)">
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="email-form-add" placeholder="Correo Institucional">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="password-form-add" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="confirm-pass-form-add" placeholder="Confirmar Contraseña">
+                </div>
+
+                <!-- Check Form -->
+                <h6>Roles</h6>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="admin-check">
+                  <label class="form-check-label" for="admin-check">Administrador</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="mod-check">
+                  <label class="form-check-label" for="mod-check">Moderador</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="tech-check">
+                  <label class="form-check-label" for="tech-check">Asesor Técnico</label>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-agregar" data-bs-dismiss="modal">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <table class="table table-bordered bg-white mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre(s)</th>
+                    <th scope="col">Apellido(s)</th>
+                    <th scope="col">Correo Institucional</th>
+                    <th scope="col">Roles</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mario</td>
+                    <td>Vazquez</td>
+                    <td>ejemplo1@docentes.uat.edu.mx</td>
+                    <td>Administrador</td>
+                    <td>
+                        <button type="button" class="btn-action editar" data-bs-toggle="modal" data-bs-target="#update-user">Editar</button>
+                        <button class="btn-action eliminar">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mario</td>
+                    <td>Vazquez</td>
+                    <td>ejemplo1@docentes.uat.edu.mx</td>
+                    <td>Administrador</td>
+                    <td>
+                        <button type="button" class="btn-action editar" data-bs-toggle="modal" data-bs-target="#update-user">Editar</button>
+                        <button class="btn-action eliminar">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mario</td>
+                    <td>Vazquez</td>
+                    <td>ejemplo1@docentes.uat.edu.mx</td>
+                    <td>Administrador</td>
+                    <td>
+                        <button type="button" class="btn-action editar" data-bs-toggle="modal" data-bs-target="#update-user">Editar</button>
+                        <button class="btn-action eliminar">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Ventana modal editar -->
+    <div class="modal fade" id="update-user" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-update-user">Editar Usuario</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <div class="mb-3">
+              <input type="text" class="form-control" id="name-form-add" placeholder="Nombre(s)">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="lastname-form-add" placeholder="Apellido(s)">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" id="email-form-add" placeholder="Correo Institucional">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" id="password-form-add" placeholder="Contraseña">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" id="confirm-pass-form-add" placeholder="Confirmar Contraseña">
+            </div>
+
+            <!-- Check Form -->
+            <h6>Roles</h6>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="admin-check">
+              <label class="form-check-label" for="admin-check">Administrador</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="mod-check">
+              <label class="form-check-label" for="mod-check">Moderador</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="tech-check">
+              <label class="form-check-label" for="tech-check">Asesor Técnico</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-actualizar" data-bs-dismiss="modal">Actualizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  </body>
+</html>
