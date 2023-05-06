@@ -79,7 +79,59 @@
 
     <div class="container-modulos">
         <div class="title"><h1>Catálogo de Actividades</h1></div>
-        <button class="btn add-activitie">Agregar Actividad</button>
+        <button type="button" class="btn add-activitie" data-bs-toggle="modal" data-bs-target="#add-activitie">
+          Agregar Actividad
+        </button>
+
+        <!-- Ventana Modal -->
+        <div class="modal fade" id="add-activitie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-add-user">Agregar Actividad</h5>
+              </div>
+              <div class="modal-body">
+                <!-- Form -->
+                <div class="main-container-form-activities">
+                  <div class="formulario">
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="asunto-form-add" placeholder="Asunto">
+                    </div>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="nombre-soli-form-add" placeholder="Nombre del Solicitante">
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Prioridad</option>
+                        <option value="1">Alta</option>
+                        <option value="2">Media</option>
+                        <option value="3">Baja</option>
+                      </select>
+                    </div>
+    
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Asesor Asignado</option>
+                        <option value="1">Asesor1</option>
+                        <option value="2">Asesor2</option>
+                        <option value="3">Asesor3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="area-descripcion">
+                    <div class="mb-3">
+                      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descripción de la Actividad..."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-agregar" data-bs-dismiss="modal">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <table class="table table-bordered bg-white mt-4">
             <thead>
@@ -102,7 +154,7 @@
                     <td>En espera</td>
                     <td>Ninguno</td>
                     <td>
-                        <button class="btn-action details">Ver detalles</button>
+                        <button type="button" class="btn-action details" data-bs-toggle="modal" data-bs-target="#show-detail">Ver detalles</button>
                     </td>
                 </tr>
                 <tr>
@@ -113,7 +165,7 @@
                     <td>En espera</td>
                     <td>Ninguno</td>
                     <td>
-                        <button class="btn-action details">Ver detalles</button>
+                        <button type="button" class="btn-action details" data-bs-toggle="modal" data-bs-target="#show-detail">Ver detalles</button>
                     </td>
                 </tr>
                 <tr>
@@ -124,11 +176,62 @@
                     <td>En espera</td>
                     <td>Ninguno</td>
                     <td>
-                        <button class="btn-action details">Ver detalles</button>
+                        <button type="button" class="btn-action details" data-bs-toggle="modal" data-bs-target="#show-detail">Ver detalles</button>
                     </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <!-- Ventana Modal Detalelr -->
+    <div class="modal fade" id="show-detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-add-user">Agregar Actividad</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <div class="main-container-form-activities">
+              <div class="formulario">
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="asunto-form-add" placeholder="Asunto">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="nombre-soli-form-add" placeholder="Nombre del Solicitante">
+                </div>
+                <div class="mb-3">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Prioridad</option>
+                    <option value="1">Alta</option>
+                    <option value="2">Media</option>
+                    <option value="3">Baja</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Asesor Asignado</option>
+                    <option value="1">Asesor1</option>
+                    <option value="2">Asesor2</option>
+                    <option value="3">Asesor3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="area-descripcion">
+                <div class="mb-3">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descripción de la Actividad..."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar Actividad</button>
+            <button type="button" class="btn btn-actualizar" data-bs-dismiss="modal">Actualizar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
