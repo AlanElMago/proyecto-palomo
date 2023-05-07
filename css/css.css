@@ -26,11 +26,11 @@ a {
     border: 1px solid #094267;
 }
 
-.add-user {
+.add-user, .iniciar-sesion {
     background: #094267;
 }
 
-.add-user:hover {
+.add-user:hover, .iniciar-sesion:hover {
     background: #46718D;
     color: #FFF;
 }
