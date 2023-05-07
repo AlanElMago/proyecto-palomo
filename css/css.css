@@ -128,109 +128,70 @@ h1 {
 }
 
 /* Barra de navegación */
-.header {
-    width: 100%;
-    height: 70px;
+.color-encabezado {
     background: #CB7F3C;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.color-texto {
+    color: #343A40;
 }
 
-.container .logo-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn-menu, .logo {
-    width: auto;
-    display: inline-block;
-    margin: 0 auto;
-}
-
-.container .btn-menu label {
-    color: #FFF;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.logo h1 {
-    margin: 0;
-    color: #FFF;
-    font-weight: 400;
-    font-size: 22px;
-    margin-left: 10px;
-}
-
-.container .menu {
-    height: 100%;
-    display: flex;
-    flex-direction: wrap;
-    align-items: center;
-    gap: 10px;
-    color: #FFF;
-    font-size: 15px;
-}
-
-.user-label {
-    display: block;
-}
-
-.menu div, .menu button {
-    font-size: 20px;
-}
-
-#cerrar-sesion {
+.btn-encabezado {
     background: none;
-    color: #FFF;
     border: none;
+    color: #fff;
+    padding: 0;
 }
 
-/* Menú Lateral */
-#btn-menu {
-    display: none;
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+}  
+
+.usuario {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+  
+.usuario-conainer {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+  
+.usuario-conainer li {
+    margin: 0 10px;
+}
+  
+.usuario-conainer p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
 }
 
-.container-menu {
-    position: absolute;
+.usuario-conainer li, .usuario-conainer p, .btn-encabezado {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* iconos */
+i {
+    font-size: 25px;
+}
+
+/* estilos del contenido del sidebar */
+.offcanvas-body {
     width: 100%;
-    height: 100vh;
-    top: 0; left: 0;
-    visibility: hidden;
+    padding: 0;
 }
 
-#btn-menu:checked ~ .container-menu {
-    visibility: visible;
+a {
+    text-decoration: none;
 }
-
-.cont-menu {
-    width: 100%;
-    max-width: 290px;
-    background: #FFF;
-    height: 100vh;
-    position: relative;
-    transition: all 500ms ease;
-    transform: translateX(-100%);
-}
-
-#btn-menu:checked ~ .container-menu .cont-menu {
-    transform: translateX(0%);
-}
-
-.cont-menu nav{
-    transform: translateY(15%);
-}
-
 /* Body pagina principal */
 img {
     margin-bottom: 110px;
