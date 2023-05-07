@@ -12,12 +12,18 @@ a {
 
 .orange {
     color: #CB7F3C;
-    border-color: 1px solid #CB7F3C;
 }
 
 .blue {
     color: #094267;
-    border-color: 1px solid #094267;
+}
+
+#tarjeta-naranja {
+    border: 1px solid #CB7F3C;
+}
+
+#tarjeta-azul {
+    border: 1px solid #094267;
 }
 
 .add-user {
@@ -25,6 +31,24 @@ a {
 }
 
 .add-user:hover {
+    background: #46718D;
+    color: #FFF;
+}
+
+.add-activitie {
+    background: #094267;
+}
+
+.add-activitie:hover {
+    background: #46718D;
+    color: #FFF;
+}
+
+.btn-agregar {
+    background: #094267;
+}
+
+.btn-agregar:hover {
     background: #46718D;
     color: #FFF;
 }
@@ -38,11 +62,38 @@ a {
     color: #FFF;
 }
 
+.btn-terminar-act {
+    background: #28A745;
+}
+
+.btn-terminar-act:hover {
+    background: #45c964;
+    color: #FFF;
+}
+
+.btn-terminar-encuesta {
+    background: #28A745;
+}
+
+.btn-terminar-encuesta:hover {
+    background: #45c964;
+    color: #FFF;
+}
+
 .btn-cancelar {
     background: #DC3545;
 }
 
 .btn-cancelar:hover {
+    background: #ec6472;
+    color: #FFF;
+}
+
+.btn-salir {
+    background: #DC3545;
+}
+
+.btn-salir:hover {
     background: #ec6472;
     color: #FFF;
 }
@@ -254,6 +305,39 @@ img {
 .tarjeta {
     width: 320px;
     height: 250px;
-    border-radius: 5px;
     margin-top: 60px;
+    background: #FFF;
+}
+
+.tarjeta:hover {
+    cursor: pointer;
+}
+
+/* estilos del formulario del modulo de actividades */
+.main-container-form-activities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.form-control, .form-select {
+    width: 100%;
+}
+
+.formulario, .area-descripcion {
+    width: 50%;
+}
+
+textarea {
+    height: 200px;
+}
+
+/* estilos del formulario del modulo de actividades asignadas */
+.content-signature {
+    border: 1px solid #DEE2E6;
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
 }
