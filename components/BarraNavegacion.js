@@ -1,13 +1,21 @@
+import { logout } from "../js/Logout.js";
+
 class BarraNavegacion extends HTMLElement
 {
   constructor()
   {
     super();
+
+    this.nombreCompletoUsuario = "";
   }
 
   connectedCallback()
   {
+    this.nombreCompletoUsuario = this.getAttribute("nombre-completo-usuario");
+
     this.render();
+
+    document.getElementById("logout-btn").addEventListener("click", logout);
   }
 
   render()
@@ -28,9 +36,9 @@ class BarraNavegacion extends HTMLElement
             </ul>
             <div class="usuario">
               <ul class="usuario-conainer">
-                <li><p class="text-white">Usuario</p></li>
+                <li><p class="text-white">${this.nombreCompletoUsuario}</p></li>
                 <li>
-                  <button class="btn-encabezado" type="button">
+                  <button id="logout-btn" class="btn-encabezado" type="button">
                     <i class="bi bi-box-arrow-right"></i>
                   </button>
                 </li>
