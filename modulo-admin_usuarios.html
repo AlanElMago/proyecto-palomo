@@ -13,162 +13,29 @@
     <title>Módulo del Administrador - Usuarios</title>
   </head>
   <body>
-    <cc-encabezado></cc-encabezado>
+    <cc-encabezado id="cc-encabezado" nombre-completo-usuario="Default"></cc-encabezado>
     <div class="container-modulos">
-        <div class="title"><h1>Usuarios Registrados</h1></div>
-        <button type="button" class="btn add-user" data-bs-toggle="modal" data-bs-target="#add-user">
-        Agregar Usuario
-        </button>
-
-        <!-- Ventana Modal -->
-        <div class="modal fade" id="add-user" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modal-add-user">Agregar Usuario</h5>
-              </div>
-              <div class="modal-body">
-                <!-- Form -->
-                <div class="mb-3">
-                  <input type="text" class="form-control" id="name-form-add" placeholder="Nombre(s)">
-                </div>
-                <div class="mb-3">
-                  <input type="text" class="form-control" id="lastname-form-add" placeholder="Apellido(s)">
-                </div>
-                <div class="mb-3">
-                  <input type="email" class="form-control" id="email-form-add" placeholder="Correo Institucional">
-                </div>
-                <div class="mb-3">
-                  <input type="password" class="form-control" id="password-form-add" placeholder="Contraseña">
-                </div>
-                <div class="mb-3">
-                  <input type="password" class="form-control" id="confirm-pass-form-add" placeholder="Confirmar Contraseña">
-                </div>
-
-                <!-- Check Form -->
-                <h6>Roles</h6>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="admin-check">
-                  <label class="form-check-label" for="admin-check">Administrador</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="mod-check">
-                  <label class="form-check-label" for="mod-check">Moderador</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="tech-check">
-                  <label class="form-check-label" for="tech-check">Asesor Técnico</label>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-agregar" data-bs-dismiss="modal">Agregar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <table class="table table-bordered bg-white mt-4">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre(s)</th>
-                    <th scope="col">Apellido(s)</th>
-                    <th scope="col">Correo Institucional</th>
-                    <th scope="col">Roles</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mario</td>
-                    <td>Vazquez</td>
-                    <td>ejemplo1@docentes.uat.edu.mx</td>
-                    <td>Administrador</td>
-                    <td>
-                        <button type="button" class="btn-action editar" data-bs-toggle="modal" data-bs-target="#update-user">Editar</button>
-                        <button class="btn-action eliminar">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mario</td>
-                    <td>Vazquez</td>
-                    <td>ejemplo1@docentes.uat.edu.mx</td>
-                    <td>Administrador</td>
-                    <td>
-                        <button type="button" class="btn-action editar" data-bs-toggle="modal" data-bs-target="#update-user">Editar</button>
-                        <button class="btn-action eliminar">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mario</td>
-                    <td>Vazquez</td>
-                    <td>ejemplo1@docentes.uat.edu.mx</td>
-                    <td>Administrador</td>
-                    <td>
-                        <button type="button" class="btn-action editar" data-bs-toggle="modal" data-bs-target="#update-user">Editar</button>
-                        <button class="btn-action eliminar">Eliminar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Ventana modal editar -->
-    <div class="modal fade" id="update-user" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modal-update-user">Editar Usuario</h5>
-          </div>
-          <div class="modal-body">
-            <!-- Form -->
-            <div class="mb-3">
-              <input type="text" class="form-control" id="name-form-add" placeholder="Nombre(s)">
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" id="lastname-form-add" placeholder="Apellido(s)">
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" id="email-form-add" placeholder="Correo Institucional">
-            </div>
-            <div class="mb-3">
-              <input type="password" class="form-control" id="password-form-add" placeholder="Contraseña">
-            </div>
-            <div class="mb-3">
-              <input type="password" class="form-control" id="confirm-pass-form-add" placeholder="Confirmar Contraseña">
-            </div>
-
-            <!-- Check Form -->
-            <h6>Roles</h6>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="admin-check">
-              <label class="form-check-label" for="admin-check">Administrador</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="mod-check">
-              <label class="form-check-label" for="mod-check">Moderador</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="tech-check">
-              <label class="form-check-label" for="tech-check">Asesor Técnico</label>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-actualizar" data-bs-dismiss="modal">Actualizar</button>
-          </div>
-        </div>
-      </div>
+      <div class="title"><h1>Usuarios Registrados</h1></div>
+      <button type="button" class="btn add-user" data-bs-toggle="modal" data-bs-target="#add-user">
+      Agregar Usuario
+      </button>
+      <cc-formulario-agregar-usuario></cc-formulario-agregar-usuario>
+      <cc-formulario-editar-usuario></cc-formulario-editar-usuario>
+      <cc-tabla-usuarios></cc-tabla-usuarios>
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- Componentes -->
     <script type="module" src="./components/Encabezado.js"></script>
+    <script type="module" src="./components/FormularioAgregarUsuario.js"></script>
+    <script type="module" src="./components/FormularioEditarUsuario.js"></script>
+    <script type="module" src="./components/TablaUsuarios.js"></script>
+
+    <!-- Scripts Personalizados -->
+    <script type="module" src="./js/Authenticate.js" defer></script>
   </body>
 </html>
