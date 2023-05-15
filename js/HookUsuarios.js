@@ -7,14 +7,21 @@ export const getUsuarios = async() =>
   return response.data;
 }
 
+export const getAsesoresTecnicos = async() =>
+{
+  const response = await axiosInstance.get('/usuarios/');
+
+  const asesoresTecnicos = response.data.filter((u) => (u.roles.find((r) => (r.nombre === "ASESOR_TECNICO"))));
+
+  return asesoresTecnicos;
+}
+
 export const getUsuario = async(e, form, idUsuario) =>
 {
   e.preventDefault();
 
   const response = await axiosInstance.get(`/usuarios/${idUsuario}`);
   const usuario = response.data;
-
-  console.log(usuario);
 
   const campoId = form.querySelector('input[id="id-form-editar"]');
   const campoNombre = form.querySelector('input[id="name-form-editar"]');
@@ -79,8 +86,6 @@ export const crearUsuario = async(e, form) =>
   if (checkBoxesRoles.rol_asesor_tecnico.checked)
     usuario.roles.push({id: 3, nombre: "ASESOR_TECNICO"});
 
-  console.log(axiosInstance);
-
   const response = await axiosInstance.post('usuarios/crear-usuario', usuario);
 
   window.location.reload(true);
@@ -125,8 +130,6 @@ export const actualizarUsuario = async(e, form) =>
 
   if (checkBoxesRoles.rol_asesor_tecnico.checked)
     usuario.roles.push({id: 3, nombre: "ASESOR_TECNICO"});
-
-  console.log(axiosInstance);
 
   const response = await axiosInstance.put('/usuarios/actualizar-usuario', usuario);
 
