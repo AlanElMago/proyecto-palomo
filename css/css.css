@@ -10,6 +10,10 @@ a {
     color: #495057;
 }
 
+.red{
+    color: #DC3545;
+}
+
 .orange {
     color: #CB7F3C;
 }
@@ -18,11 +22,15 @@ a {
     color: #094267;
 }
 
-#tarjeta-naranja {
+#tarjeta-red {
+    border: 1px solid #DC3545;
+}
+
+#tarjeta-orange {
     border: 1px solid #CB7F3C;
 }
 
-#tarjeta-azul {
+#tarjeta-blue {
     border: 1px solid #094267;
 }
 
@@ -274,7 +282,6 @@ img {
 /* estilos de las cards */
 .card-titulo {
     padding: 20px;
-    color: #212529;
     font-size: 18px;
     background: #F8F9FA;
     border-bottom: 1px solid #DEE2E6;

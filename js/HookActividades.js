@@ -25,6 +25,27 @@ export const getActividades = async() =>
   return actividades;
 }
 
+export const getActividadesPorIdUsuario = async(idUsuario) =>
+{
+  const response = await axiosInstance.get(`/actividades/por-id-usuario/${idUsuario}`);
+  const actividades = response.data;
+
+  actividades.map((a) => {
+    switch (a.prioridad.nombre) {
+      case "ALTA":
+        a.colorCarta = "red";
+        break;
+      case "MEDIA":
+        a.colorCarta = "orange";
+        break;
+      case "BAJA":
+        a.colorCarta = "blue";
+    }
+  });
+
+  return actividades;
+}
+
 export const getActividad = async(e, form, idActividad) =>
 {
   e.preventDefault();
@@ -52,6 +73,26 @@ export const getActividad = async(e, form, idActividad) =>
   }
   
   return response;
+}
+
+export const verActividad = async(e, idActividad) =>
+{
+  e.preventDefault();
+
+  const response = await axiosInstance.get(`/actividades/${idActividad}`);
+  const actividad = response.data;
+
+  const pNombreActividad = document.getElementById("p-ver-act-nombre-actividad");
+  const pNombreSolicitante = document.getElementById("p-ver-act-nombre-solicitante");
+  const pNombrePrioridad = document.getElementById("p-ver-act-nombre-prioridad");
+  const taDescripcion = document.getElementById("ta-ver-act-descripcion");
+
+  pNombreActividad.innerHTML = actividad.nombre;
+  pNombreSolicitante.innerHTML = actividad.nombreSolicitante;
+  pNombrePrioridad.innerHTML = actividad.prioridad.nombre;
+  taDescripcion.innerHTML = actividad.descripcion;
+
+  return actividad;
 }
 
 export const crearActividad = async(e, form) =>
