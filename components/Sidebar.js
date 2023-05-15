@@ -23,7 +23,7 @@ class Sidebar extends HTMLElement
         aria-labelledby="offcanvasExamplelabel"
       >
         <div class="offcanvas-body">
-        <cc-accordion></cc-accordion>
+          <cc-accordion></cc-accordion>
         </div>
       </div>
     `;

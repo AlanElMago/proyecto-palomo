@@ -15,7 +15,7 @@ const authenticate = async (jwtToken) =>
     axiosInstance.interceptors.request.use((config) => {
       config.headers.Authorization = `Bearer ${jwtToken}`;
 
-      return config;
+      return config
     });
 
     const response = await axiosInstance.get('/auth/authenticate');
